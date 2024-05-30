@@ -19,7 +19,7 @@ function Container() {
         </h3>
       </div>
 
-      <div>
+      <div className="info">
         <div>
           <h2>Repos</h2>
           <h1>8</h1>
@@ -84,6 +84,8 @@ const Contianerdiv = styled.div`
       font-weight: 400;
       line-height: 25px; /* 192.308% */
     }
+  }
+  .info {
   }
 `;
 export default Container;
