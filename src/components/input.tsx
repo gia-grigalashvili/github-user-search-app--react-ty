@@ -1,12 +1,15 @@
 // import React from "react";
 import styled from "styled-components";
 import check from "/public/images/icon-search.svg";
-function Input() {
+function Input({ getusers, setuserName }) {
   return (
     <Inputmaindiv>
       <img src={check} alt="" />
-      <input type="text" />
-      <button>Search</button>
+      <input
+        onChange={(event) => setuserName(event.target.value)}
+        type="text"
+      />
+      <button onClick={getusers}>Search</button>
     </Inputmaindiv>
   );
 }
