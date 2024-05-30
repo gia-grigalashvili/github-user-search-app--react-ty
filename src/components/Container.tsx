@@ -11,27 +11,26 @@ function Container() {
           <p>@octocat</p>
           <h3>Joined 25 Jan 2011</h3>
         </div>
+      </div>
+      <div className="text">
+        <h3>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+          Quisque volutpat mattis eros.
+        </h3>
+      </div>
 
-        <div className="text">
-          <h3>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-            odio. Quisque volutpat mattis eros.
-          </h3>
-        </div>
-
+      <div>
         <div>
-          <div>
-            <h2>Repos</h2>
-            <h1>8</h1>
-          </div>
-          <div>
-            <h2>Followers</h2>
-            <h1>3938</h1>
-          </div>
-          <div>
-            <h2>Following</h2>
-            <h1>9</h1>
-          </div>
+          <h2>Repos</h2>
+          <h1>8</h1>
+        </div>
+        <div>
+          <h2>Followers</h2>
+          <h1>3938</h1>
+        </div>
+        <div>
+          <h2>Following</h2>
+          <h1>9</h1>
         </div>
       </div>
     </Contianerdiv>
@@ -43,10 +42,11 @@ const Contianerdiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px;
+  padding: 30px;
+  margin-top: 20px;
   .information {
     display: flex;
-    gap: 5px;
+    gap: 20px;
     img {
       width: 70px;
       height: 70px;
@@ -75,6 +75,7 @@ const Contianerdiv = styled.div`
   }
 
   .text {
+    margin-top: 30px;
     h3 {
       color: #fff;
       font-family: "Space Mono";
