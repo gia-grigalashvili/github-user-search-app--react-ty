@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Container() {
   return (
     <Contianerdiv>
-      <div>
+      <div className="information">
         <img src="" alt="" />
         <div>
           <h1>The Octocat</h1>
@@ -40,6 +40,38 @@ function Container() {
 const Contianerdiv = styled.div`
   border-radius: 15px;
   background: #1e2a47;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 24px;
+  information {
+    display: flex;
+    gap: 5px;
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 70px;
+    }
+    h1 {
+      color: #fff;
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    p {
+      color: #0079ff;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    h3 {
+      color: #fff;
+
+      font-size: 13px;
+
+      font-weight: 400;
+    }
+  }
 `;
 export default Container;
