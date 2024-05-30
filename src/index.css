@@ -7,6 +7,9 @@
 
 body {
   background: #f6f8ff;
-
   font-family: "Space Mono";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }

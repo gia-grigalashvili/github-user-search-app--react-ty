@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import location from "/public/images/icon-location.svg";
 function Container() {
   return (
     <Contianerdiv>
@@ -20,17 +20,36 @@ function Container() {
       </div>
 
       <div className="info">
-        <div>
+        <div className="ifno-text">
           <h2>Repos</h2>
           <h1>8</h1>
         </div>
-        <div>
+        <div className="ifno-text">
           <h2>Followers</h2>
           <h1>3938</h1>
         </div>
-        <div>
+        <div className="ifno-text">
           <h2>Following</h2>
           <h1>9</h1>
+        </div>
+      </div>
+
+      <div className="info-1">
+        <div className="info-1-text">
+          <img src={location} alt="" />
+          <p></p>
+        </div>
+        <div className="info-1-text">
+          <img src="" alt="" />
+          <p></p>
+        </div>
+        <div className="info-1-text">
+          <img src="" alt="" />
+          <p></p>
+        </div>
+        <div className="info-1-text">
+          <img src="" alt="" />
+          <p></p>
         </div>
       </div>
     </Contianerdiv>
@@ -86,6 +105,57 @@ const Contianerdiv = styled.div`
     }
   }
   .info {
+    border-radius: 10px;
+    background: #f6f8ff;
+    padding: 23px 20px 23px;
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    .ifno-text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h2 {
+        color: #4b6a9b;
+        text-align: center;
+        font-family: "Space Mono";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      h1 {
+        color: #2b3442;
+        text-align: center;
+        font-family: "Space Mono";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+    .info-1 {
+      .info-1-text {
+        display: flex;
+        gap: 20px;
+
+        img {
+          width: 13.753px;
+          height: 20px;
+          flex-shrink: 0;
+        }
+        p {
+          color: #4b6a9b;
+          font-family: "Space Mono";
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
   }
 `;
 export default Container;
