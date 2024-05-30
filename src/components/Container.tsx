@@ -60,7 +60,7 @@ function Container() {
 }
 const Contianerdiv = styled.div`
   border-radius: 15px;
-  background: #1e2a47;
+  background-color: #fefefe;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +75,7 @@ const Contianerdiv = styled.div`
       border-radius: 70px;
     }
     h1 {
-      color: #fff;
+      color: #2b3442;
 
       font-size: 16px;
       font-style: normal;
@@ -88,7 +88,7 @@ const Contianerdiv = styled.div`
       font-weight: 400;
     }
     h3 {
-      color: #fff;
+      color: #697c9a;
 
       font-size: 13px;
 
@@ -99,7 +99,7 @@ const Contianerdiv = styled.div`
   .text {
     margin-top: 30px;
     h3 {
-      color: #fff;
+      color: #4b6a9b;
       font-family: "Space Mono";
       font-size: 13px;
       font-style: normal;

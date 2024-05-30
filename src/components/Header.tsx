@@ -13,7 +13,7 @@ function Header() {
 }
 const Headerdiv = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 10px;
   h1 {
     color: #222731;
