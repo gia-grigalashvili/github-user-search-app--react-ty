@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import location from "/public/images/icon-location.svg";
+import share from "/public/images/icon-website.svg";
 function Container() {
   return (
     <Contianerdiv>
@@ -37,10 +38,10 @@ function Container() {
       <div className="info-1">
         <div className="info-1-text">
           <img src={location} alt="" />
-          <p></p>
+          <p>San Francisco</p>
         </div>
         <div className="info-1-text">
-          <img src="" alt="" />
+          <img src={share} alt="" />
           <p></p>
         </div>
         <div className="info-1-text">
