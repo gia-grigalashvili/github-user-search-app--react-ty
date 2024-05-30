@@ -1,15 +1,17 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./App.css";
 import Header from "./components/Header";
 import Container from "./components/Container";
 import Input from "./components/Input";
 import { useEffect, useState } from "react";
+import User from "./Types/User";
 
 function App() {
-  const [user, setuser] = useState<User | null>(null);
+  const [userr, setuser] = useState<User | null>(null);
   const [userName, setuserName] = useState<string>("octocat");
   useEffect(() => {
     getusers();
-  }, [user]);
+  }, [userr]);
 
   const getusers = async () => {
     const response = await fetch(`https://api.github.com/users/${userName}`);
@@ -20,7 +22,7 @@ function App() {
     <>
       <Header></Header>
       <Input setuserName={setuserName} getusers={getusers}></Input>
-      <Container></Container>
+      <Container User={User}></Container>
     </>
   );
 }

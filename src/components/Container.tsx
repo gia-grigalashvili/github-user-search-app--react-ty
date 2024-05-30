@@ -4,13 +4,17 @@ import location from "/public/images/icon-location.svg";
 import share from "/public/images/icon-website.svg";
 import twitter from "/public/images/icon-twitter.svg";
 import company from "/public/images/icon-company.svg";
-function Container() {
+import User from "../Types/User";
+interface ContainerProps {
+  user: User;
+}
+function Container({ user }: ContainerProps) {
   return (
     <Contianerdiv>
       <div className="information">
-        <img src="" alt="" />
+        <img src={user?.avatar_url} alt="" />
         <div>
-          <h1>The Octocat</h1>
+          <h1>{user?.name}</h1>
           <p>@octocat</p>
           <h3>Joined 25 Jan 2011</h3>
         </div>

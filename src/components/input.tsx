@@ -1,13 +1,18 @@
 // import React from "react";
 import styled from "styled-components";
 import check from "/public/images/icon-search.svg";
-function Input({ getusers, setuserName }) {
+interface InputProps {
+  getusers: () => void;
+  setuserName: React.Dispatch<React.SetStateAction<string>>;
+}
+function Input({ getusers, setuserName }: InputProps) {
   return (
     <Inputmaindiv>
       <img src={check} alt="" />
       <input
         onChange={(event) => setuserName(event.target.value)}
         type="text"
+        placeholder="Enter GitHub username"
       />
       <button onClick={getusers}>Search</button>
     </Inputmaindiv>
