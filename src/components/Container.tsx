@@ -139,24 +139,28 @@ const Contianerdiv = styled.div`
         text-transform: uppercase;
       }
     }
-    .info-1 {
-      .info-1-text {
-        display: flex;
-        gap: 20px;
+  }
+  .info-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    .info-1-text {
+      display: flex;
+      gap: 20px;
 
-        img {
-          width: 13.753px;
-          height: 20px;
-          flex-shrink: 0;
-        }
-        p {
-          color: #4b6a9b;
-          font-family: "Space Mono";
-          font-size: 13px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
+      img {
+        width: 13.753px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+      p {
+        color: #4b6a9b;
+        font-family: "Space Mono";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
     }
   }
