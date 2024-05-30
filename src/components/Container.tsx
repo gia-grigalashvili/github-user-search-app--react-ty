@@ -12,7 +12,7 @@ function Container() {
           <h3>Joined 25 Jan 2011</h3>
         </div>
 
-        <div>
+        <div className="text">
           <h3>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
             odio. Quisque volutpat mattis eros.
@@ -44,7 +44,7 @@ const Contianerdiv = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 24px;
-  information {
+  .information {
     display: flex;
     gap: 5px;
     img {
@@ -71,6 +71,17 @@ const Contianerdiv = styled.div`
       font-size: 13px;
 
       font-weight: 400;
+    }
+  }
+
+  .text {
+    h3 {
+      color: #fff;
+      font-family: "Space Mono";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px; /* 192.308% */
     }
   }
 `;

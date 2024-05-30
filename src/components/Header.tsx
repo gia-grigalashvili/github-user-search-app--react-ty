@@ -12,10 +12,9 @@ function Header() {
   );
 }
 const Headerdiv = styled.div`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 121px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
   h1 {
     color: #222731;
     font-family: "Space Mono";
@@ -24,8 +23,10 @@ const Headerdiv = styled.div`
     font-weight: 700;
     line-height: normal;
   }
-  nightmode {
+  .nightmode {
     display: flex;
+    gap: 10px;
+    align-items: center;
     h1 {
       color: #4b6a9b;
       text-align: right;
@@ -35,6 +36,10 @@ const Headerdiv = styled.div`
       font-weight: 700;
       line-height: normal;
       letter-spacing: 2.5px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
     }
   }
 `;
