@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-function input() {
+function Input() {
   return <Inputmain></Inputmain>;
 }
 
@@ -11,4 +11,4 @@ const Inputmain = styled.input`
   pad: 20px;
   width: 326px;
 `;
-export default input;
+export default Input;
