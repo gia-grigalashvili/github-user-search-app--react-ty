@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Container from "./components/Container";
-import Input from "./components/input";
+import Input from "./components/Input";
 function App() {
   return (
     <>
