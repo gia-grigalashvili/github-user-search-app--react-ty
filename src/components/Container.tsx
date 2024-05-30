@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import location from "/public/images/icon-location.svg";
 import share from "/public/images/icon-website.svg";
+import twitter from "/public/images/icon-twitter.svg";
 function Container() {
   return (
     <Contianerdiv>
@@ -45,7 +46,7 @@ function Container() {
           <p></p>
         </div>
         <div className="info-1-text">
-          <img src="" alt="" />
+          <img src={twitter} alt="" />
           <p></p>
         </div>
         <div className="info-1-text">
