@@ -1,52 +1,61 @@
 import styled from "styled-components";
 import Moon from "/public/images/icon-moon.svg";
-import sun from "/public/images/icon-sun.svg";
-type modes = {
-  toggleDarkMode: string;
+import Sun from "/public/images/icon-sun.svg";
+
+type Modes = {
+  toggleDarkMode: () => void;
   mode: boolean;
 };
-function Header({ toggleDarkMode, mode }: modes) {
+
+function Header({ toggleDarkMode, mode }: Modes) {
   return (
-    <Headerdiv mode={mode}>
+    <HeaderDiv mode={mode}>
       <h1>devfinder</h1>
       <div className="nightmode">
-        <h1>LIGHT</h1>
-        <img onClick={toggleDarkMode} src={mode ? sun : Moon} alt="" />
+        <h1>{mode ? "DARK" : "LIGHT"}</h1>
+        <img onClick={toggleDarkMode} src={mode ? Sun : Moon} alt="Mode icon" />
       </div>
-    </Headerdiv>
+    </HeaderDiv>
   );
 }
-const Headerdiv = styled.div<{ mode: boolean }>`
+
+const HeaderDiv = styled.div<{ mode: boolean }>`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
+
   h1 {
-    /* color: ${(props) => (props.mode ? "#f0f3fc" : "#1E2A47")}; */
     color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
     font-family: "Space Mono";
     font-size: 26px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
   }
+
   .nightmode {
     display: flex;
     gap: 10px;
     align-items: center;
+
     h1 {
       color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
       text-align: right;
       font-family: "Space Mono";
       font-size: 13px;
-      font-style: normal;
       font-weight: 700;
-      line-height: normal;
       letter-spacing: 2.5px;
     }
+
     img {
       width: 20px;
       height: 20px;
+      cursor: pointer;
     }
   }
+
+  @media screen and (min-width: 1000px) {
+    width: 500px;
+  }
 `;
+
 export default Header;

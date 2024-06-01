@@ -13,7 +13,7 @@ function Container({ user, mode }: ContainerProps) {
     <Contianerdiv mode={mode}>
       <div className="information">
         <img src={user?.avatar_url} alt="" />
-        <div>
+        <div className="names">
           <h1>{user?.name || "no name"}</h1>
           <p>@{user?.login}</p>
           <h3>Joined {new Date(user?.created_at).toLocaleDateString()}</h3>
@@ -82,23 +82,28 @@ const Contianerdiv = styled.div<{ mode: boolean }>`
       height: 70px;
       border-radius: 70px;
     }
-    h1 {
-      color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-    p {
-      color: ${(props) => (props.mode ? "#fff" : "#0079FF")};
-      font-size: 13px;
-      font-weight: 400;
-    }
-    h3 {
-      color: ${(props) => (props.mode ? "#fff" : "#697c9a")};
-      font-size: 13px;
+    .names {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h1 {
+        color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      p {
+        color: ${(props) => (props.mode ? "#fff" : "#0079FF")};
+        font-size: 13px;
+        font-weight: 400;
+      }
+      h3 {
+        color: ${(props) => (props.mode ? "#fff" : "#697c9a")};
+        font-size: 13px;
 
-      font-weight: 400;
+        font-weight: 400;
+      }
     }
   }
 

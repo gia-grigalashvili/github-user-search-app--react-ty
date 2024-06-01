@@ -6,7 +6,11 @@ import Container from "./components/Container";
 import Input from "./components/Input";
 import { useEffect, useState } from "react";
 import User from "./Types/User";
-
+// interface ContainerProps {
+//   user: User;
+//   mode: boolean;
+//   userName: string;
+// }
 function App() {
   const [mode, setmode] = useState<boolean>(false);
   const [userr, setuser] = useState<User | null>(null);
