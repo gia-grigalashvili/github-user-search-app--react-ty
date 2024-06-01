@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import Moon from "/public/images/icon-moon.svg";
-function Header() {
+import sun from "/public/images/icon-sun.svg";
+type modes = {
+  toggleDarkMode: string;
+  mode: boolean;
+};
+function Header({ toggleDarkMode, mode }: modes) {
   return (
     <Headerdiv>
       <h1>devfinder</h1>
       <div className="nightmode">
         <h1>LIGHT</h1>
-        <img src={Moon} alt="" />
+        <img onClick={toggleDarkMode} src={mode ? sun : Moon} alt="" />
       </div>
     </Headerdiv>
   );

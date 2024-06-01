@@ -33,3 +33,5 @@ type User = {
   updated_at: string;
 };
 export default User;
+
+// src/Types/User.ts

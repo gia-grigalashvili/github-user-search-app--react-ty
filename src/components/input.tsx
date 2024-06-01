@@ -4,14 +4,16 @@ import check from "/public/images/icon-search.svg";
 interface InputProps {
   getusers: () => void;
   setuserName: React.Dispatch<React.SetStateAction<string>>;
+  userName: string;
 }
-function Input({ getusers, setuserName }: InputProps) {
+function Input({ getusers, setuserName, userName }: InputProps) {
   return (
     <Inputmaindiv>
       <img src={check} alt="" />
       <input
         onChange={(event) => setuserName(event.target.value)}
         type="text"
+        value={userName}
         placeholder="Enter GitHub username"
       />
       <button onClick={getusers}>Search</button>
@@ -54,7 +56,7 @@ const Inputmaindiv = styled.div`
   input {
     border: none;
     width: 100%;
-    background-color: #0079ff;
+
     color: #4b6a9b;
     font-family: "Space Mono";
     font-size: 13px;

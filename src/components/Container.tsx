@@ -1,70 +1,73 @@
-import React from "react";
 import styled from "styled-components";
-import location from "/public/images/icon-location.svg";
-import share from "/public/images/icon-website.svg";
-import twitter from "/public/images/icon-twitter.svg";
-import company from "/public/images/icon-company.svg";
+// import location from "/public/images/icon-location.svg";
+// import share from "/public/images/icon-website.svg";
+// import twitter from "/public/images/icon-twitter.svg";
+// import company from "/public/images/icon-company.svg";
 import User from "../Types/User";
 interface ContainerProps {
   user: User;
+  mode: boolean;
 }
-function Container({ user }: ContainerProps) {
+function Container({ user, mode }: ContainerProps) {
   return (
-    <Contianerdiv>
+    <Contianerdiv mode={mode}>
       <div className="information">
         <img src={user?.avatar_url} alt="" />
         <div>
-          <h1>{user?.name}</h1>
-          <p>@octocat</p>
-          <h3>Joined 25 Jan 2011</h3>
+          <h1>{user?.name || "no name"}</h1>
+          <p>@{user?.login}</p>
+          <h3>Joined {new Date(user?.created_at).toLocaleDateString()}</h3>
         </div>
       </div>
       <div className="text">
-        <h3>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros.
-        </h3>
+        <h3>{user?.bio || "This user has no bio"}</h3>
       </div>
 
       <div className="info">
         <div className="ifno-text">
           <h2>Repos</h2>
-          <h1>8</h1>
+          <h1>{user?.public_repos}</h1>
         </div>
         <div className="ifno-text">
           <h2>Followers</h2>
-          <h1>3938</h1>
+          <h1>{user?.followers}</h1>
         </div>
         <div className="ifno-text">
           <h2>Following</h2>
-          <h1>9</h1>
+          <h1>{user?.following}</h1>
         </div>
       </div>
 
       <div className="info-1">
         <div className="info-1-text">
-          <img src={location} alt="" />
-          <p>San Francisco</p>
+          <img src="/public/images/icon-location.svg" alt="location icon" />
+          <p>{user?.location || "Not available"}</p>
         </div>
         <div className="info-1-text">
-          <img src={share} alt="" />
-          <p></p>
+          <img src="/public/images/icon-website.svg" alt="website icon" />
+          <p>{user?.blog || "Not available"}</p>
         </div>
         <div className="info-1-text">
-          <img src={twitter} alt="" />
-          <p></p>
+          <img src="/public/images/icon-twitter.svg" alt="twitter icon" />
+          <p>
+            {user?.twitter_username
+              ? `@${user.twitter_username}`
+              : "Not available"}
+          </p>
         </div>
         <div className="info-1-text">
-          <img src={company} alt="" />
-          <p></p>
+          <img src="/public/images/icon-company.svg" alt="company icon" />
+          <p>{user?.company || "Not available"}</p>
         </div>
       </div>
     </Contianerdiv>
   );
 }
-const Contianerdiv = styled.div`
+const Contianerdiv = styled.div<{ mode: boolean }>`
   border-radius: 15px;
-  background-color: #fefefe;
+  /* background-color: ${(props) => (props.mode ? "#a6f9ff" : "#8d4a4a")}; */
+  background: ${(props) => (props.mode ? "rgb(37, 39, 61)" : "#fff")};
+  /* background-color: #f8f1f1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,6 +76,7 @@ const Contianerdiv = styled.div`
   .information {
     display: flex;
     gap: 20px;
+    background: ${(props) => (props.mode ? "rgb(37, 39, 61)" : "#fff")};
     img {
       width: 70px;
       height: 70px;
@@ -101,6 +105,7 @@ const Contianerdiv = styled.div`
   }
 
   .text {
+    background: ${(props) => (props.mode ? "rgb(37, 39, 61)" : "#fff")};
     margin-top: 30px;
     h3 {
       color: #4b6a9b;

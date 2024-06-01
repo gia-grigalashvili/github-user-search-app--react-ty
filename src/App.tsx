@@ -1,17 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "./App.css";
 import Header from "./components/Header";
+import { createGlobalStyle } from "styled-components";
 import Container from "./components/Container";
 import Input from "./components/Input";
 import { useEffect, useState } from "react";
 import User from "./Types/User";
 
 function App() {
+  const [mode, setmode] = useState<boolean>(false);
   const [userr, setuser] = useState<User | null>(null);
   const [userName, setuserName] = useState<string>("octocat");
+
+  const toggleDarkMode = () => {
+    setmode(!mode);
+  };
   useEffect(() => {
     getusers();
-  }, [userr]);
+  }, []);
 
   const getusers = async () => {
     const response = await fetch(`https://api.github.com/users/${userName}`);
@@ -20,11 +26,23 @@ function App() {
   };
   return (
     <>
-      <Header></Header>
-      <Input setuserName={setuserName} getusers={getusers}></Input>
-      <Container User={User}></Container>
+      <GlobalStyle mode={mode} />
+      <Header mode={mode} toggleDarkMode={toggleDarkMode}></Header>
+      <Input
+        userName={userName}
+        setuserName={setuserName}
+        getusers={getusers}
+      ></Input>
+      {userr && <Container user={userr} mode={mode} />}
     </>
   );
 }
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${(props) =>
+      props.mode ? "#171823;" : "rgb(240, 240, 240)"};
+      font-family: "Josefin Sans";
+  }
+`;
 
 export default App;
