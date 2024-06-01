@@ -29,6 +29,7 @@ function App() {
       <GlobalStyle mode={mode} />
       <Header mode={mode} toggleDarkMode={toggleDarkMode}></Header>
       <Input
+        mode={mode}
         userName={userName}
         setuserName={setuserName}
         getusers={getusers}

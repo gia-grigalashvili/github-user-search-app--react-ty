@@ -7,7 +7,7 @@ type modes = {
 };
 function Header({ toggleDarkMode, mode }: modes) {
   return (
-    <Headerdiv>
+    <Headerdiv mode={mode}>
       <h1>devfinder</h1>
       <div className="nightmode">
         <h1>LIGHT</h1>
@@ -16,12 +16,13 @@ function Header({ toggleDarkMode, mode }: modes) {
     </Headerdiv>
   );
 }
-const Headerdiv = styled.div`
+const Headerdiv = styled.div<{ mode: boolean }>`
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   h1 {
-    color: #222731;
+    /* color: ${(props) => (props.mode ? "#f0f3fc" : "#1E2A47")}; */
+    color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
     font-family: "Space Mono";
     font-size: 26px;
     font-style: normal;
@@ -33,7 +34,7 @@ const Headerdiv = styled.div`
     gap: 10px;
     align-items: center;
     h1 {
-      color: #4b6a9b;
+      color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
       text-align: right;
       font-family: "Space Mono";
       font-size: 13px;

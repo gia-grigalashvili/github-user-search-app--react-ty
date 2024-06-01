@@ -65,9 +65,9 @@ function Container({ user, mode }: ContainerProps) {
 }
 const Contianerdiv = styled.div<{ mode: boolean }>`
   border-radius: 15px;
-  /* background-color: ${(props) => (props.mode ? "#a6f9ff" : "#8d4a4a")}; */
-  background: ${(props) => (props.mode ? "rgb(37, 39, 61)" : "#fff")};
-  /* background-color: #f8f1f1; */
+
+  /* background: ${(props) => (props.mode ? "#ff0000)" : "#fff")}; */
+  background: ${(props) => (props.mode ? "#1E2A47" : "#fff")};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,28 +76,26 @@ const Contianerdiv = styled.div<{ mode: boolean }>`
   .information {
     display: flex;
     gap: 20px;
-    background: ${(props) => (props.mode ? "rgb(37, 39, 61)" : "#fff")};
+    background: ${(props) => (props.mode ? "#1E2A47" : "#fff")};
     img {
       width: 70px;
       height: 70px;
       border-radius: 70px;
     }
     h1 {
-      color: #2b3442;
-
+      color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
     }
     p {
-      color: #0079ff;
+      color: ${(props) => (props.mode ? "#fff" : "#0079FF")};
       font-size: 13px;
       font-weight: 400;
     }
     h3 {
-      color: #697c9a;
-
+      color: ${(props) => (props.mode ? "#fff" : "#697c9a")};
       font-size: 13px;
 
       font-weight: 400;
@@ -105,10 +103,10 @@ const Contianerdiv = styled.div<{ mode: boolean }>`
   }
 
   .text {
-    background: ${(props) => (props.mode ? "rgb(37, 39, 61)" : "#fff")};
+    background: ${(props) => (props.mode ? "#1E2A47" : "#fff")};
     margin-top: 30px;
     h3 {
-      color: #4b6a9b;
+      color: ${(props) => (props.mode ? "#fff" : "#4b6a9b")};
       font-family: "Space Mono";
       font-size: 13px;
       font-style: normal;
@@ -118,7 +116,7 @@ const Contianerdiv = styled.div<{ mode: boolean }>`
   }
   .info {
     border-radius: 10px;
-    background: #f6f8ff;
+    background: ${(props) => (props.mode ? "#141D2F" : "#fff")};
     padding: 23px 20px 23px;
     display: flex;
     gap: 20px;
@@ -129,7 +127,7 @@ const Contianerdiv = styled.div<{ mode: boolean }>`
       flex-direction: column;
       gap: 10px;
       h2 {
-        color: #4b6a9b;
+        color: ${(props) => (props.mode ? "#fff" : "#4b6a9b")};
         text-align: center;
         font-family: "Space Mono";
         font-size: 11px;
@@ -138,7 +136,7 @@ const Contianerdiv = styled.div<{ mode: boolean }>`
         line-height: normal;
       }
       h1 {
-        color: #2b3442;
+        color: ${(props) => (props.mode ? "#fff" : "#2b3442")};
         text-align: center;
         font-family: "Space Mono";
         font-size: 16px;
@@ -163,8 +161,10 @@ const Contianerdiv = styled.div<{ mode: boolean }>`
         height: 20px;
         flex-shrink: 0;
       }
+
       p {
-        color: #4b6a9b;
+        color: ${(props) => (props.mode ? "#fff" : "#4b6a9b")};
+
         font-family: "Space Mono";
         font-size: 13px;
         font-style: normal;
