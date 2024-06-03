@@ -42,7 +42,7 @@ function App() {
     </>
   );
 }
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ mode: boolean }>`
   body {
     background-color: ${(props) =>
       props.mode ? "#171823;" : "rgb(240, 240, 240)"};
