@@ -30,11 +30,12 @@ const Inputmaindiv = styled.div<{ mode: boolean }>`
   padding: 10px;
   height: 60px;
   display: flex;
-  justify-content: space-around;
+
   align-items: center;
   margin-top: 20px;
   border: none;
   width: 100%;
+  gap: 10px;
 
   img {
     width: 20.048px;

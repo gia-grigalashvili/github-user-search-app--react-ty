@@ -16,6 +16,9 @@ function App() {
   const [userr, setuser] = useState<User | null>(null);
   const [userName, setuserName] = useState<string>("octocat");
 
+  // const [mode, setmode] = useState<ContainerProps>(false);
+  // const [userr, setuser] = useState<ContainerProps | null>(null);
+  // const [userName, setuserName] = useState<ContainerProps>("octocat");
   const toggleDarkMode = () => {
     setmode(!mode);
   };
@@ -44,8 +47,7 @@ function App() {
 }
 const GlobalStyle = createGlobalStyle<{ mode: boolean }>`
   body {
-    background-color: ${(props) =>
-      props.mode ? "#171823;" : "rgb(240, 240, 240)"};
+    background-color: ${(props) => (props.mode ? "#171823;" : "F6F8FF")};
       font-family: "Josefin Sans";
   }
 `;

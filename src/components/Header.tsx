@@ -23,6 +23,7 @@ const HeaderDiv = styled.div<{ mode: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   margin-top: 10px;
 
   h1 {
@@ -54,7 +55,7 @@ const HeaderDiv = styled.div<{ mode: boolean }>`
   }
 
   @media screen and (min-width: 1000px) {
-    width: 500px;
+    width: 700px;
   }
 `;
 
