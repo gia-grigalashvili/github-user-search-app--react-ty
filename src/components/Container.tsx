@@ -77,10 +77,7 @@ function Container({ user, mode }: ContainerProps) {
                   </p>
                 </div>
                 <div className="info-1-text">
-                  <img
-                    src="/public/images/icon-company.svg"
-                    alt="company icon"
-                  />
+                  <img src="/images/icon-company.svg" alt="company icon" />
                   <p>{user?.company || "Not available"}</p>
                 </div>
               </div>
