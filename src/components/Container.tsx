@@ -50,26 +50,17 @@ function Container({ user, mode }: ContainerProps) {
             <div className="info-1">
               <div className="again2">
                 <div className="info-1-text">
-                  <img
-                    src="/public/images/icon-location.svg"
-                    alt="location icon"
-                  />
+                  <img src="/images/icon-location.svg" alt="location icon" />
                   <p>{user?.location || "Not available"}</p>
                 </div>
                 <div className="info-1-text">
-                  <img
-                    src="/public/images/icon-website.svg"
-                    alt="website icon"
-                  />
+                  <img src="/images/icon-website.svg" alt="website icon" />
                   <p>{user?.blog || "Not available"}</p>
                 </div>
               </div>
               <div className="again3">
                 <div className="info-1-text">
-                  <img
-                    src="/public/images/icon-twitter.svg"
-                    alt="twitter icon"
-                  />
+                  <img src="/images/icon-twitter.svg" alt="twitter icon" />
                   <p>
                     {user?.twitter_username
                       ? `@${user.twitter_username}`
